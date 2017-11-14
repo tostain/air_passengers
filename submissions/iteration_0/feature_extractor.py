@@ -17,7 +17,7 @@ class FeatureExtractor(object):
         path = os.path.dirname(__file__)
         ext_data = pd.read_csv(os.path.join(path, 'external_data.csv'))
         X_ext_data = ext_data[['Date', 'AirPort', 'Max TemperatureC',
-                               'PaidHoliday', 'FederalHoliday']]
+                               'PaidHoliday', 'FederalHoliday', 'Latitude', 'Longitude']]
         
         # Merges (left join) fetched external data with base data
         X_ext_data = X_ext_data.rename(
